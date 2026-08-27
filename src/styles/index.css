@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", "Playfair Display", Georgia, serif;
+  --font-sans:
+    "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-surface-bg: #faf9f5;
+  --color-surface-card: #ffffff;
+  --color-surface-muted: #f2efe8;
+  --color-ink-primary: #161616;
+  --color-ink-secondary: #52524e;
+  --color-ink-muted: #82827c;
+  --color-border-subtle: #e8e5dc;
+  --color-accent: #262624;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface-bg);
+    color: var(--color-ink-primary);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Editorial Classes */
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth Focus States for Keyboard Navigation */
+:focus-visible {
+  outline: 2px solid #161616;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* Floating Icon Animations for Bento Grid */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(-3deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 5s ease-in-out infinite;
+}
+
+/* Continuous Marquee Ticker (Left to Right) */
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Continuous Marquee Ticker (Right to Left) */
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Slowed Down Marquee Animations for Calm Reading Experience */
+.animate-marquee-ltr {
+  animation: marquee-ltr 50s linear infinite;
+}
+
+.animate-marquee-ltr:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-rtl {
+  animation: marquee-rtl 50s linear infinite;
+}
+
+.animate-marquee-rtl:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow,
+  .animate-float-reverse,
+  .animate-marquee-ltr,
+  .animate-marquee-rtl {
+    animation: none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #faf9f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d5d2c8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0ada2;
+}
