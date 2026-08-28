@@ -190,7 +190,7 @@ export const VstMobileAppDemo: React.FC = () => {
 
               {/* Direct Call / WhatsApp CTA */}
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/916281285084?text=Hi%20Bala%20Venkataraju,%20I%20saw%20your%20VST%20Beauty%20Care%20project%20and%20would%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366]/10 border border-[#25D366]/30 p-2.5 rounded-2xl flex items-center justify-between text-xs text-[#25D366] font-mono"

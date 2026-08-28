@@ -1,6 +1,7 @@
 import React from 'react';
 import { siteConfig } from '../../data/siteConfig';
 import { RajuLogo } from './RajuLogo';
+import { FileText } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -23,6 +24,17 @@ export const Footer: React.FC = () => {
             <a href="#work" className="hover:text-[#FAF9F5] transition-colors">Work</a>
             <a href="#about" className="hover:text-[#FAF9F5] transition-colors">About</a>
             <a href="#contact" className="hover:text-[#FAF9F5] transition-colors">Contact</a>
+            
+            <a
+              href="/Bala_Venkataraju_Singampalli_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#FAF9F5] text-[#A1A19A] flex items-center space-x-1 transition-colors"
+            >
+              <FileText className="w-3.5 h-3.5" />
+              <span>Resume PDF</span>
+            </a>
+
             <a href={siteConfig.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF9F5] transition-colors text-[#25D366]">WhatsApp</a>
             <a href={siteConfig.github} target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF9F5] transition-colors">GitHub</a>
             <a href={siteConfig.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[#FAF9F5] transition-colors">LinkedIn</a>
