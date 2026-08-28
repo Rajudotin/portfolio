@@ -2,57 +2,66 @@ import { SkillCategory } from "../types";
 
 export const skillsCategories: SkillCategory[] = [
   {
-    title: "PRODUCT DEVELOPMENT",
+    title: "FRONTEND & MOBILE",
     description:
-      "Translating business and user problems into clear, scalable digital product architectures across web and mobile platforms.",
-    iconName: "Layers",
-    skills: [
-      "Web Applications",
-      "Mobile Applications",
-      "Dual-Experience UX Architecture",
-      "Responsive Product UI",
-      "Component System Design",
-    ],
-  },
-  {
-    title: "FRONTEND ENGINEERING",
-    description:
-      "Building high-performance, accessible, and type-safe user interfaces with modern web standards and modular patterns.",
+      "Building high-performance, accessible, type-safe web platforms and dual-role mobile applications.",
     iconName: "Code",
     skills: [
       "React 19",
       "React Native",
       "TypeScript",
+      "JavaScript (Vanilla JS)",
       "Tailwind CSS v4",
-      "Vite & Web Architecture",
-      "State & Routing Systems",
+      "HTML5 & CSS3",
+      "Vite",
+      "Responsive Layout Systems",
     ],
   },
   {
-    title: "AI & BACKEND SYSTEMS",
+    title: "BACKEND & DATABASES",
     description:
-      "Integrating machine learning models, computer vision pipelines, and lightweight microservices into real-world applications.",
+      "Architecting microservices, RESTful API gateways, and polyglot database persistence pipelines.",
+    iconName: "Layers",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Django",
+      "FastAPI",
+      "REST API Design",
+      "MySQL",
+      "MongoDB",
+      "Redis Vector Cache",
+    ],
+  },
+  {
+    title: "AI & COMPUTER VISION",
+    description:
+      "Integrating deep learning facial recognition models, object detection pipelines, and speech recognition.",
     iconName: "Cpu",
     skills: [
-      "Python",
-      "FastAPI",
-      "InsightFace & OpenCV",
-      "Node.js / Express (MERN Stack)",
-      "Redis Caching",
-      "RESTful API Engineering",
+      "InsightFace (ArcFace)",
+      "OpenCV",
+      "YOLOv8",
+      "OpenAI Whisper",
+      "PyTorch",
+      "ONNXRuntime",
+      "Cloudinary Storage",
     ],
   },
   {
-    title: "DESIGN & UX ARCHITECTURE",
+    title: "TOOLS & DEPLOYMENT",
     description:
-      "Designing intuitive user flows, editorial layouts, and design systems that prioritize usability and clarity over fluff.",
+      "Streamlining automated build pipelines, containerized microservices, and multi-cloud hosting.",
     iconName: "Layout",
     skills: [
-      "UI/UX Architecture",
-      "Responsive Layout Systems",
-      "Design Tokens & Typography",
-      "Interaction & Motion Design",
-      "Accessibility (WCAG AA)",
+      "Git & GitHub",
+      "Docker",
+      "Nginx Gateway",
+      "Vercel Cloud",
+      "Railway",
+      "Render",
+      "Postman",
+      "ffmpeg",
     ],
   },
 ];

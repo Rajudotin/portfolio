@@ -51,6 +51,11 @@ export const InteractiveWorldGlobeCanvas: React.FC<{ size?: number }> = ({
     const radius = size * 0.4;
     const perspective = 300;
 
+    // Check prefers-reduced-motion user accessibility preference
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
     // 1. Construct Delicate Particle Mesh Lines (Latitude & Longitude Dotted Lines)
     const meshPoints: { x: number; y: number; z: number; isContinent?: boolean }[] = [];
 
@@ -87,9 +92,14 @@ export const InteractiveWorldGlobeCanvas: React.FC<{ size?: number }> = ({
       // 100% Transparent Background Clearing
       ctx.clearRect(0, 0, width, height);
 
-      // Auto-rotation on axis & floating bobbing effect
-      rotY += 0.0035;
-      const floatY = Math.sin(Date.now() * 0.002) * 6; // Gentle up and down floating bobbing
+      // Respect reduced motion setting
+      if (!prefersReducedMotion) {
+        rotY += 0.0035;
+      }
+
+      const floatY = prefersReducedMotion
+        ? 0
+        : Math.sin(Date.now() * 0.002) * 6; // Gentle up and down floating bobbing
 
       const cosX = Math.cos(rotX);
       const sinX = Math.sin(rotX);

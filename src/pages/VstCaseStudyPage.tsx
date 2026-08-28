@@ -3,16 +3,15 @@ import { projectsData } from "../data/projectsData";
 import { CaseStudyLayout } from "../components/casestudy/CaseStudyLayout";
 import { VstVisualPreview } from "../components/work/VstVisualPreview";
 import {
-  ArrowRight,
   CheckCircle2,
   Sparkles,
   GraduationCap,
   Smartphone,
   ShieldCheck,
   Layers,
-  Server,
   ExternalLink,
   MapPin,
+  UserCheck,
 } from "lucide-react";
 
 export const VstCaseStudyPage: React.FC = () => {
@@ -26,13 +25,13 @@ export const VstCaseStudyPage: React.FC = () => {
       {project.liveUrl && (
         <div className="bg-[#161616] text-[#FAF9F5] p-4 sm:p-5 rounded-xl border border-[#262624] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="flex items-center space-x-3">
-            <div className="w-2.5 h-2.5 rounded-full bg-[#10B981] animate-ping" />
+            <div className="w-2.5 h-2.5 rounded-full bg-[#10B981]" />
             <div>
               <span className="text-xs font-mono text-[#E5C158] font-bold block uppercase tracking-wider">
                 LIVE PRODUCTION WEBSITE
               </span>
               <span className="text-xs font-mono text-[#A1A19A]">
-                Serving Yelamanchili & Atchutapuram, AP
+                Serving Yelamanchili & Atchutapuram, Andhra Pradesh
               </span>
             </div>
           </div>
@@ -48,128 +47,132 @@ export const VstCaseStudyPage: React.FC = () => {
         </div>
       )}
 
-      {/* 1. Feature Visual Banner */}
+      {/* Feature Visual Banner */}
       <section className="space-y-4">
         <VstVisualPreview />
       </section>
 
-      {/* 2. Overview & Product Goal */}
+      {/* 1. Project Overview */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-[#E8E5DC] pb-12">
         <div className="md:col-span-4">
           <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
-            01 / OVERVIEW & GOAL
+            PROJECT OVERVIEW
           </h2>
         </div>
-        <div className="md:col-span-8 space-y-6 text-[#52524E] leading-relaxed">
+        <div className="md:col-span-8 space-y-5 text-[#52524E] leading-relaxed">
           <div className="flex items-center space-x-2 text-xs font-mono text-[#059669] bg-[#059669]/10 px-3 py-1 rounded border border-[#059669]/20 w-max">
             <MapPin className="w-3.5 h-3.5" />
             <span>Yelamanchili & Atchutapuram, Andhra Pradesh</span>
           </div>
 
           <h3 className="text-2xl font-display text-[#161616]">
-            Solving Application Fragmentation with Dual-Persona UX Architecture
+            A Unified Application for Salon Services & Beauty Academy Management
           </h3>
           <p>{project.fullDescription}</p>
+        </div>
+      </section>
 
-          <div className="bg-[#F2EFE8] border border-[#E8E5DC] p-6 rounded-lg space-y-3">
-            <h4 className="text-sm font-semibold text-[#161616] font-mono">
-              CORE PRODUCT RULE
+      {/* 2. The Challenge */}
+      <section className="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-[#E8E5DC] pb-12">
+        <div className="md:col-span-4">
+          <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
+            THE CHALLENGE
+          </h2>
+        </div>
+        <div className="md:col-span-8 space-y-4">
+          <p className="text-base text-[#52524E] leading-relaxed">
+            {project.problem}
+          </p>
+          <div className="bg-[#F2EFE8] border border-[#E8E5DC] p-5 rounded-lg space-y-1.5">
+            <h4 className="text-xs font-mono font-semibold text-[#161616] uppercase">
+              FRAGMENTATION ISSUES
             </h4>
-            <p className="text-sm text-[#161616] italic font-serif text-lg">
-              "A customer and a student do NOT use separate applications. The
-              same application supports both experiences through a unified
-              account and role-based experience model."
+            <p className="text-sm text-[#161616]">
+              Running salon bookings and academy student management through separate tools or offline paper logs created booking friction and administrative delays.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 3. The Dual-Experience Architecture Diagram */}
-      <section className="space-y-6 border-b border-[#E8E5DC] pb-12">
-        <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C]">
-          02 / DUAL-EXPERIENCE MODEL
-        </h2>
+      {/* 3. The Solution */}
+      <section className="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-[#E8E5DC] pb-12">
+        <div className="md:col-span-4">
+          <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
+            THE SOLUTION
+          </h2>
+        </div>
+        <div className="md:col-span-8 space-y-6">
+          <p className="text-base text-[#52524E] leading-relaxed">
+            {project.solution}
+          </p>
 
-        {/* Conceptual Diagram */}
-        <div className="bg-[#161616] text-[#FAF9F5] p-6 sm:p-8 rounded-xl border border-[#262624] space-y-8">
-          <div className="text-center max-w-md mx-auto">
-            <span className="text-xs font-mono uppercase tracking-widest text-[#E5C158]">
-              UNIFIED AUTHENTICATION MODEL
-            </span>
-            <div className="mt-2 bg-[#262624] border border-[#3A3A36] px-4 py-3 rounded-lg flex items-center justify-center space-x-2">
-              <Smartphone className="w-4 h-4 text-[#E5C158]" />
-              <span className="font-semibold text-sm">
-                Single User Account & Credentials
+          {/* Dual-Experience Architecture Box */}
+          <div className="bg-[#161616] text-[#FAF9F5] p-6 sm:p-8 rounded-xl border border-[#262624] space-y-6">
+            <div className="text-center max-w-md mx-auto">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#E5C158]">
+                DUAL-ROLE UX ARCHITECTURE
               </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
-            {/* Customer Column */}
-            <div className="bg-[#222220] border border-[#333330] p-6 rounded-lg space-y-4">
-              <div className="flex items-center space-x-2 text-[#E5C158] font-semibold text-sm">
-                <Sparkles className="w-4 h-4" />
-                <span>CUSTOMER EXPERIENCE</span>
+              <div className="mt-2 bg-[#262624] border border-[#3A3A36] px-4 py-3 rounded-lg flex items-center justify-center space-x-2">
+                <Smartphone className="w-4 h-4 text-[#E5C158]" />
+                <span className="font-semibold text-sm">
+                  Single User Context & Role Switcher
+                </span>
               </div>
-              <div className="flex items-center justify-between text-xs font-mono text-[#A1A19A] border-b border-[#333330] pb-2">
-                <span>DISCOVER</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-                <span>BOOK</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-                <span>MANAGE</span>
-              </div>
-              <ul className="space-y-2 text-xs text-[#C5C5BE]">
-                {project.customerExperience?.map((item) => (
-                  <li key={item} className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
 
-            {/* Student Column */}
-            <div className="bg-[#222220] border border-[#333330] p-6 rounded-lg space-y-4">
-              <div className="flex items-center space-x-2 text-[#64B5F6] font-semibold text-sm">
-                <GraduationCap className="w-4 h-4" />
-                <span>STUDENT EXPERIENCE</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Customer Column */}
+              <div className="bg-[#222220] border border-[#333330] p-5 rounded-lg space-y-3">
+                <div className="flex items-center space-x-2 text-[#E5C158] font-semibold text-sm">
+                  <Sparkles className="w-4 h-4" />
+                  <span>CUSTOMER SALON APP</span>
+                </div>
+                <ul className="space-y-2 text-xs text-[#C5C5BE]">
+                  {project.customerExperience?.map((item) => (
+                    <li key={item} className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="flex items-center justify-between text-xs font-mono text-[#A1A19A] border-b border-[#333330] pb-2">
-                <span>JOIN</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-                <span>LEARN</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-                <span>TRACK</span>
+
+              {/* Student Column */}
+              <div className="bg-[#222220] border border-[#333330] p-5 rounded-lg space-y-3">
+                <div className="flex items-center space-x-2 text-[#64B5F6] font-semibold text-sm">
+                  <GraduationCap className="w-4 h-4" />
+                  <span>STUDENT ACADEMY PORTAL</span>
+                </div>
+                <ul className="space-y-2 text-xs text-[#C5C5BE]">
+                  {project.studentExperience?.map((item) => (
+                    <li key={item} className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#64B5F6] shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-2 text-xs text-[#C5C5BE]">
-                {project.studentExperience?.map((item) => (
-                  <li key={item} className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#64B5F6] shrink-0" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. Detailed Feature Modules */}
+      {/* 4. Key Features */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-[#E8E5DC] pb-12">
         <div className="md:col-span-4">
           <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
-            03 / KEY FEATURES
+            KEY FEATURES
           </h2>
         </div>
-        <div className="md:col-span-8 space-y-8">
+        <div className="md:col-span-8 space-y-6">
           {project.keyFeatures.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-[#FAF9F5] border border-[#E8E5DC] p-6 rounded-lg space-y-4"
+              className="bg-[#FAF9F5] border border-[#E8E5DC] p-6 rounded-lg space-y-3"
             >
               <h3 className="text-lg font-semibold text-[#161616] flex items-center space-x-2">
                 <span className="font-mono text-xs text-[#82827C]">
-                  0{idx + 1}.
+                  {idx + 1}.
                 </span>
                 <span>{feature.title}</span>
               </h3>
@@ -194,61 +197,88 @@ export const VstCaseStudyPage: React.FC = () => {
         </div>
       </section>
 
-      {/* 5. Design & Technical Decisions */}
+      {/* 5. Tech Stack */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-[#E8E5DC] pb-12">
         <div className="md:col-span-4">
           <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
-            04 / ARCHITECTURE & DESIGN
+            TECH STACK
           </h2>
         </div>
         <div className="md:col-span-8 space-y-6">
-          <p className="text-base text-[#52524E] leading-relaxed">
-            {project.architectureApproach}
-          </p>
-          <div className="space-y-3">
-            <h4 className="text-xs font-mono font-semibold uppercase text-[#161616]">
-              KEY DESIGN DECISIONS
-            </h4>
-            <div className="space-y-2">
-              {project.designDecisions.map((decision, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-start space-x-3 text-sm text-[#52524E] bg-[#F2EFE8]/60 p-4 rounded-lg border border-[#E8E5DC]"
-                >
-                  <Layers className="w-4 h-4 text-[#161616] shrink-0 mt-0.5" />
-                  <span>{decision}</span>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {project.technologies.map((tech) => (
+              <div
+                key={tech.category}
+                className="bg-[#FAF9F5] border border-[#E8E5DC] p-5 rounded-lg"
+              >
+                <span className="text-xs font-mono font-semibold text-[#82827C] block mb-3 uppercase">
+                  {tech.category}
+                </span>
+                <ul className="space-y-2 text-xs text-[#161616] font-medium">
+                  {tech.items.map((item) => (
+                    <li key={item} className="flex items-center space-x-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#10B981] shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 6. Current Status & Future Backend Direction */}
+      {/* 6. My Role & Implementation */}
+      <section className="grid grid-cols-1 md:grid-cols-12 gap-8 border-b border-[#E8E5DC] pb-12">
+        <div className="md:col-span-4">
+          <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
+            MY ROLE & IMPLEMENTATION
+          </h2>
+        </div>
+        <div className="md:col-span-8 space-y-4">
+          <div className="bg-[#F2EFE8]/60 p-5 rounded-lg border border-[#E8E5DC]">
+            <span className="text-xs font-mono font-bold text-[#161616] uppercase block mb-2">
+              RESPONSIBILITIES
+            </span>
+            <ul className="space-y-2 text-xs text-[#52524E]">
+              {project.responsibilities.map((resp, idx) => (
+                <li key={idx} className="flex items-start space-x-2">
+                  <UserCheck className="w-3.5 h-3.5 text-[#161616] shrink-0 mt-0.5" />
+                  <span>{resp}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            {project.designDecisions.map((decision, idx) => (
+              <div
+                key={idx}
+                className="flex items-start space-x-3 text-xs text-[#52524E] bg-[#FAF9F5] p-3.5 rounded-lg border border-[#E8E5DC]"
+              >
+                <Layers className="w-3.5 h-3.5 text-[#161616] shrink-0 mt-0.5" />
+                <span>{decision}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Current Build & Status */}
       <section className="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="md:col-span-4">
           <h2 className="text-xs uppercase font-mono tracking-widest text-[#82827C] sticky top-28">
-            05 / STATUS & BACKEND ROADMAP
+            STATUS & LIVE BUILD
           </h2>
         </div>
-        <div className="md:col-span-8 space-y-6">
-          <div className="bg-[#FAF9F5] border border-[#E8E5DC] p-6 rounded-lg space-y-3">
-            <div className="flex items-center space-x-2 text-xs font-mono text-[#82827C]">
-              <ShieldCheck className="w-4 h-4 text-[#10B981]" />
-              <span>CURRENT IMPLEMENTATION STATUS</span>
-            </div>
-            <p className="text-sm text-[#161616] font-medium">
-              {project.currentStatus}
-            </p>
-          </div>
-
-          <div className="bg-[#161616] text-[#FAF9F5] p-6 rounded-lg space-y-3">
+        <div className="md:col-span-8 space-y-4">
+          <div className="bg-[#161616] text-[#FAF9F5] p-6 rounded-lg border border-[#262624] space-y-3">
             <div className="flex items-center space-x-2 text-xs font-mono text-[#E5C158]">
-              <Server className="w-4 h-4" />
-              <span>FUTURE BACKEND INTEGRATION DIRECTION</span>
+              <ShieldCheck className="w-4 h-4" />
+              <span>LIVE PRODUCTION STATUS</span>
             </div>
             <p className="text-sm text-[#C5C5BE] leading-relaxed">
-              {project.futureBackendDirection}
+              {project.currentStatus}
             </p>
           </div>
         </div>

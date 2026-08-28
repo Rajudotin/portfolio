@@ -16,11 +16,20 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   body {
     background-color: var(--color-surface-bg);
     color: var(--color-ink-primary);
     font-family: var(--font-sans);
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 

@@ -1,14 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const AiAttendanceVisualPreview: React.FC<{ isCompact?: boolean }> = ({
-  isCompact = false,
-}) => {
+export const AiAttendanceVisualPreview: React.FC<{
+  isCompact?: boolean;
+  projectSlug?: string;
+}> = ({ projectSlug = "ai-attendance" }) => {
   return (
-    <div
-      className={`w-full bg-[#0F141C] rounded-2xl overflow-hidden border border-[#1E293B] shadow-xl relative group transition-all duration-300 ${
-        isCompact ? "min-h-[300px]" : "min-h-[380px]"
-      }`}
-    >
+    <div className="w-full bg-[#0F141C] rounded-2xl overflow-hidden border border-[#1E293B] shadow-xl relative group transition-all duration-300">
       {/* Top Browser URL Bar */}
       <div className="bg-[#182232] border-b border-[#243347] px-4 py-3 flex items-center justify-between relative z-20">
         <div className="flex items-center space-x-2">
@@ -27,13 +25,17 @@ export const AiAttendanceVisualPreview: React.FC<{ isCompact?: boolean }> = ({
       </div>
 
       {/* Clean Coverpage Image Showcase */}
-      <div className="relative w-full overflow-hidden">
+      <Link
+        to={`/work/${projectSlug}`}
+        className="block relative w-full overflow-hidden cursor-pointer"
+        aria-label="Click to view EduVision AI Attendance Case Study"
+      >
         <img
           src="/images/eduvision_coverpage.png"
           alt="EduVision AI Attendance System Coverpage Showcase"
-          className="w-full h-auto object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+          className="w-full h-auto object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
         />
-      </div>
+      </Link>
     </div>
   );
 };

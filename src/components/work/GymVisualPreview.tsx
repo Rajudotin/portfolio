@@ -1,14 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const GymVisualPreview: React.FC<{ isCompact?: boolean }> = ({
-  isCompact = false,
-}) => {
+export const GymVisualPreview: React.FC<{
+  isCompact?: boolean;
+  projectSlug?: string;
+}> = ({ projectSlug = "gym-website" }) => {
   return (
-    <div
-      className={`w-full bg-[#141414] rounded-2xl overflow-hidden border border-[#262626] shadow-xl relative group transition-all duration-300 ${
-        isCompact ? "min-h-[300px]" : "min-h-[380px]"
-      }`}
-    >
+    <div className="w-full bg-[#141414] rounded-2xl overflow-hidden border border-[#262626] shadow-xl relative group transition-all duration-300">
       {/* Top Browser URL Bar */}
       <div className="bg-[#1C1C1C] border-b border-[#2E2E2E] px-4 py-3 flex items-center justify-between relative z-20">
         <div className="flex items-center space-x-2">
@@ -27,13 +25,17 @@ export const GymVisualPreview: React.FC<{ isCompact?: boolean }> = ({
       </div>
 
       {/* Clean Coverpage Image Showcase */}
-      <div className="relative w-full overflow-hidden">
+      <Link
+        to={`/work/${projectSlug}`}
+        className="block relative w-full overflow-hidden cursor-pointer"
+        aria-label="Click to view FitForge Gym Case Study"
+      >
         <img
           src="/images/gym_coverpage.png"
           alt="FitForge Gym Athletic Club Coverpage Showcase"
-          className="w-full h-auto object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+          className="w-full h-auto object-cover object-top group-hover:scale-[1.01] transition-transform duration-500"
         />
-      </div>
+      </Link>
     </div>
   );
 };

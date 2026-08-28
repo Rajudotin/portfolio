@@ -3,7 +3,7 @@ import { HeroSection } from '../components/hero/HeroSection';
 import { BentoGridSection } from '../components/about/BentoGridSection';
 import { SelectedWorkSection } from '../components/work/SelectedWorkSection';
 import { TechStackGrid } from '../components/skills/TechStackGrid';
-import { SkillsSection } from '../components/skills/SkillsSection';
+import { ProcessSection } from '../components/process/ProcessSection';
 import { AboutSection } from '../components/about/AboutSection';
 import { ContactSection } from '../components/contact/ContactSection';
 
@@ -14,7 +14,7 @@ export const HomePage: React.FC = () => {
       <BentoGridSection />
       <SelectedWorkSection />
       <TechStackGrid />
-      <SkillsSection />
+      <ProcessSection />
       <AboutSection />
       <ContactSection />
     </div>
