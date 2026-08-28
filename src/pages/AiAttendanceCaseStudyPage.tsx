@@ -2,7 +2,7 @@ import React from "react";
 import { projectsData } from "../data/projectsData";
 import { CaseStudyLayout } from "../components/casestudy/CaseStudyLayout";
 import { AiAttendanceVisualPreview } from "../components/work/AiAttendanceVisualPreview";
-import { Cpu, ArrowRight, CheckCircle2, ShieldCheck } from "lucide-react";
+import { Cpu, ArrowRight, CheckCircle2, ShieldCheck, ExternalLink } from "lucide-react";
 
 export const AiAttendanceCaseStudyPage: React.FC = () => {
   const project =
@@ -11,6 +11,32 @@ export const AiAttendanceCaseStudyPage: React.FC = () => {
 
   return (
     <CaseStudyLayout project={project} nextProject={nextProject}>
+      {/* Live Website Banner Bar */}
+      {project.liveUrl && (
+        <div className="bg-[#0F141C] text-[#F0F4F8] p-4 sm:p-5 rounded-xl border border-[#1E293B] flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+          <div className="flex items-center space-x-3">
+            <div className="w-2.5 h-2.5 rounded-full bg-[#38BDF8] animate-ping" />
+            <div>
+              <span className="text-xs font-mono text-[#38BDF8] font-bold block uppercase tracking-wider">
+                LIVE PRODUCTION PLATFORM
+              </span>
+              <span className="text-xs font-mono text-[#94A3B8]">
+                99.8% Biometric Precision Facial Recognition
+              </span>
+            </div>
+          </div>
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-4 py-2 text-xs font-mono font-bold uppercase tracking-wider text-[#0F141C] bg-[#38BDF8] hover:bg-[#7DD3FC] rounded transition-all duration-200 shadow-sm"
+          >
+            <span>Visit Live Application</span>
+            <ExternalLink className="w-3.5 h-3.5 ml-2 text-[#0F141C]" />
+          </a>
+        </div>
+      )}
+
       {/* 1. Feature Visual Banner */}
       <section className="space-y-4">
         <AiAttendanceVisualPreview />

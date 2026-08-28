@@ -14,6 +14,8 @@ export interface Project {
   tags: string[];
   slug: string;
   visualType: "vst" | "ai-attendance" | "gym";
+  liveUrl?: string;
+  location?: string;
   problem: string;
   solution: string;
   architectureApproach: string;

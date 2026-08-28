@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { Project } from "../../types";
 import { VstVisualPreview } from "./VstVisualPreview";
 import { AiAttendanceVisualPreview } from "./AiAttendanceVisualPreview";
@@ -52,13 +52,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           <div>
             {/* Meta Header */}
-            <div className="flex items-center space-x-3 mb-4">
+            <div className="flex items-center space-x-3 mb-4 flex-wrap gap-y-2">
               <span className="font-mono text-xs font-bold text-[#161616] bg-[#F2EFE8] px-2.5 py-1 rounded border border-[#E8E5DC]">
                 {project.number}
               </span>
               <span className="text-xs uppercase font-mono tracking-wider text-[#82827C]">
                 {project.category}
               </span>
+              {project.location && (
+                <span className="text-[10px] font-mono text-[#059669] bg-[#059669]/10 px-2 py-0.5 rounded border border-[#059669]/20">
+                  {project.location}
+                </span>
+              )}
             </div>
 
             {/* Title */}
@@ -84,8 +89,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             </div>
           </div>
 
-          {/* CTA Link */}
-          <div>
+          {/* CTA Links */}
+          <div className="flex items-center space-x-5 flex-wrap gap-y-3">
             <Link
               to={`/work/${project.slug}`}
               className="inline-flex items-center text-sm font-semibold uppercase tracking-wider text-[#161616] hover:text-[#52524E] group/btn transition-colors cursor-pointer py-1"
@@ -93,6 +98,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               <span>View Case Study</span>
               <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1.5 transition-transform duration-200" />
             </Link>
+
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-xs font-mono font-bold uppercase tracking-wider text-[#FAF9F5] bg-[#161616] hover:bg-[#262624] px-3.5 py-1.5 rounded transition-colors shadow-xs"
+              >
+                <span>Live Demo</span>
+                <ExternalLink className="w-3.5 h-3.5 ml-1.5 text-[#E5C158]" />
+              </a>
+            )}
           </div>
         </div>
       </div>

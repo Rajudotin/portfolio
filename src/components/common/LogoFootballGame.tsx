@@ -77,29 +77,29 @@ export const LogoFootballGame: React.FC = () => {
   return (
     <div
       onClick={handleKickBall}
-      className="my-3 relative w-full h-28 bg-[#161616] border border-[#2E2E2C] rounded-xl overflow-hidden cursor-pointer group hover:border-[#E5C158]/60 transition-colors shadow-inner"
+      className="my-3 relative w-full h-28 bg-[#161616] border border-white/20 rounded-xl overflow-hidden cursor-pointer group hover:border-white transition-colors shadow-inner"
       title="Click or hover to kick the logo ball into the goal!"
     >
-      {/* Mini Soccer Pitch Marking Lines */}
-      <div className="absolute inset-0 border border-[#FAF9F5]/10 rounded-xl pointer-events-none" />
+      {/* Mini Soccer Pitch Marking Lines (Crisp Pure White) */}
+      <div className="absolute inset-0 border border-white/30 rounded-xl pointer-events-none" />
 
-      {/* Center Pitch Circle */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-16 h-16 border border-[#FAF9F5]/10 rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-px h-full bg-[#FAF9F5]/10 pointer-events-none" />
+      {/* Center Pitch Circle & Center Line (Pure White) */}
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-16 h-16 border border-white/30 rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 w-px h-full bg-white/30 pointer-events-none" />
 
-      {/* Goal Post Box on Right Side */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-16 border-t-2 border-b-2 border-l-2 border-[#E5C158] bg-[#E5C158]/10 rounded-l-md pointer-events-none flex items-center justify-center">
-        <div className="text-[9px] font-mono text-[#E5C158] uppercase font-bold rotate-90 tracking-widest opacity-80">
+      {/* Goal Post Box on Right Side (Pure White Accent) */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-16 border-t-2 border-b-2 border-l-2 border-white bg-white/10 rounded-l-md pointer-events-none flex items-center justify-center shadow-[0_0_10px_rgba(255,255,255,0.3)]">
+        <div className="text-[9px] font-mono text-white uppercase font-bold rotate-90 tracking-widest">
           GOAL
         </div>
       </div>
 
       {/* Goal Celebration Splash */}
       {goalScored && (
-        <div className="absolute inset-0 bg-[#E5C158]/20 backdrop-blur-xs flex items-center justify-center animate-in fade-in duration-200 z-20">
-          <div className="bg-[#121212] border border-[#E5C158] px-3 py-1.5 rounded-full flex items-center space-x-2 shadow-xl animate-bounce">
-            <Trophy className="w-4 h-4 text-[#E5C158]" />
-            <span className="text-xs font-mono font-bold text-[#FAF9F5]">
+        <div className="absolute inset-0 bg-white/20 backdrop-blur-xs flex items-center justify-center animate-in fade-in duration-200 z-20">
+          <div className="bg-white text-[#121212] border border-white px-3.5 py-1.5 rounded-full flex items-center space-x-2 shadow-2xl animate-bounce">
+            <Trophy className="w-4 h-4 text-[#121212]" />
+            <span className="text-xs font-mono font-bold text-[#121212]">
               GOAL! LET'S WORK TOGETHER!
             </span>
           </div>
@@ -115,13 +115,13 @@ export const LogoFootballGame: React.FC = () => {
           transform: `rotate(${rotation}deg)`,
         }}
       >
-        <div className="w-10 h-10 rounded-full bg-[#E5C158] text-[#121212] flex items-center justify-center shadow-[0_4px_12px_rgba(229,193,88,0.4)] border border-[#FAF9F5]/30 group-hover:scale-110 transition-transform">
+        <div className="w-10 h-10 rounded-full bg-white text-[#121212] flex items-center justify-center shadow-[0_4px_16px_rgba(255,255,255,0.5)] border border-white group-hover:scale-110 transition-transform">
           <RajuLogo size={24} className="text-[#121212]" />
         </div>
       </div>
 
       {/* Interactive Helper Prompt Pill */}
-      <div className="absolute bottom-1.5 left-2 text-[9px] font-mono text-[#A1A19A] uppercase tracking-wider bg-[#121212]/80 px-2 py-0.5 rounded border border-[#2E2E2C]">
+      <div className="absolute bottom-1.5 left-2 text-[9px] font-mono text-white uppercase tracking-wider bg-black/80 px-2 py-0.5 rounded border border-white/30">
         CLICK LOGO TO KICK ⚽
       </div>
     </div>

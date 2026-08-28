@@ -50,7 +50,7 @@ export const BentoGridSection: React.FC = () => {
   return (
     <section className="py-20 sm:py-28 bg-[#121212] text-[#FAF9F5] border-b border-[#262624] relative overflow-hidden">
       {/* Editorial Background Grid Lines */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -103,64 +103,53 @@ export const BentoGridSection: React.FC = () => {
             {/* Top Row Split (Cards 2 & 3) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               
-              {/* Card 2: Let's work together with Interactive Logo Football Game */}
-              <div className="bg-[#1A1A1A] border border-[#2A2A28] rounded-2xl p-6 flex flex-col justify-between hover:border-[#3E3E3B] transition-colors relative">
+              {/* Card 2: Let's work together with Pure White Styling & Logo Football Game */}
+              <div className="bg-[#1A1A1A] border border-[#2A2A28] rounded-2xl p-6 flex flex-col justify-between hover:border-white/40 transition-colors relative">
                 <div>
-                  <h4 className="text-xl font-bold font-display text-[#FAF9F5] mb-1">
+                  <h4 className="text-xl font-bold font-display text-white mb-1">
                     Let's work together
                   </h4>
-                  <p className="text-xs text-[#A1A19A] font-mono">
+                  <p className="text-xs text-white/80 font-mono">
                     on your next project or product initiative
                   </p>
                 </div>
 
-                {/* Interactive Logo Football Game Mini-Pitch */}
+                {/* Interactive Logo Football Game Mini-Pitch with White Styling */}
                 <LogoFootballGame />
 
                 <button
                   onClick={handleCopyEmail}
-                  className="w-full bg-[#242422] hover:bg-[#2F2F2C] border border-[#383834] rounded-lg py-2.5 px-3 flex items-center justify-between text-xs font-mono text-[#FAF9F5] transition-colors cursor-pointer group"
+                  className="w-full bg-[#242422] hover:bg-[#2F2F2C] border border-white/20 hover:border-white rounded-lg py-2.5 px-3 flex items-center justify-between text-xs font-mono text-white transition-colors cursor-pointer group"
                 >
                   <div className="flex items-center space-x-2 overflow-hidden">
-                    <Mail className="w-3.5 h-3.5 text-[#E5C158] shrink-0" />
+                    <Mail className="w-3.5 h-3.5 text-white shrink-0" />
                     <span className="truncate">{siteConfig.email}</span>
                   </div>
                   {copied ? (
                     <Check className="w-3.5 h-3.5 text-[#10B981] shrink-0 ml-2" />
                   ) : (
-                    <Copy className="w-3.5 h-3.5 text-[#A1A19A] group-hover:text-[#FAF9F5] shrink-0 ml-2" />
+                    <Copy className="w-3.5 h-3.5 text-white/70 group-hover:text-white shrink-0 ml-2" />
                   )}
                 </button>
               </div>
 
-              {/* Card 3: Location & Timezone with Interactive 3D World Map Globe Canvas */}
-              <div className="bg-[#1A1A1A] border border-[#2A2A28] rounded-2xl p-6 flex flex-col justify-between hover:border-[#3E3E3B] transition-colors relative overflow-hidden group">
+              {/* Card 3: Remote / India Location with Full Slow-Rotating 3D Globe */}
+              <div className="bg-[#161616] border border-[#2A2A28] rounded-2xl p-6 flex flex-col justify-between hover:border-white/30 transition-colors relative overflow-hidden group">
                 <div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-[#A1A19A] block mb-1">
-                    Remote / Location
+                  <span className="text-xs font-mono text-[#82827C] block mb-1">
+                    Remote
                   </span>
-                  <h4 className="text-2xl font-bold font-display text-[#FAF9F5] mb-1">
+                  <h4 className="text-2xl font-bold font-display text-white mb-1">
                     India
                   </h4>
                   <p className="text-xs text-[#A1A19A] leading-relaxed">
-                    Very flexible with time zone communications and async workflows.
+                    I'm very flexible with time zone communications
                   </p>
                 </div>
 
-                {/* Interactive 3D World Map Globe Canvas */}
-                <div className="my-3 flex justify-center items-center">
+                {/* Interactive Full 3D Rotating Globe */}
+                <div className="flex justify-center items-center py-2">
                   <InteractiveWorldGlobeCanvas size={140} />
-                </div>
-
-                {/* Status Bar */}
-                <div className="pt-3 border-t border-[#2A2A28] flex items-center justify-between">
-                  <div className="flex items-center space-x-2 text-xs font-mono text-[#FAF9F5]">
-                    <span className="w-2 h-2 rounded-full bg-[#E5C158] animate-ping" />
-                    <span>IST (UTC+5:30)</span>
-                  </div>
-                  <span className="text-[10px] font-mono text-[#10B981] bg-[#10B981]/10 px-2 py-0.5 rounded border border-[#10B981]/20">
-                    AVAILABLE
-                  </span>
                 </div>
               </div>
 

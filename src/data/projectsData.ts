@@ -7,53 +7,55 @@ export const projectsData: Project[] = [
     name: "VST Beauty Care & Academy",
     category: "Mobile Application / Product",
     badge: "Flagship Mobile Product",
+    liveUrl: "https://vst-saloon.vercel.app/",
+    location: "Yelamanchili & Atchutapuram, Andhra Pradesh",
     shortDescription:
-      'A unified mobile application designed around "One App, One Account, Two Experiences" — seamlessly bridging customer beauty services and student academy management.',
+      'A unified mobile application designed around "One App, One Account, Two Experiences" — seamlessly bridging professional salon services and vocational beauty training in Yelamanchili & Atchutapuram, AP.',
     fullDescription:
-      "VST Beauty Care & Academy is a multi-persona mobile product architecture that replaces fragmented applications with a single, role-based mobile experience. Users maintain a single account context while switching between personal grooming & beauty service discovery and comprehensive academy course management.",
+      "VST Beauty Care & Academy is a multi-persona mobile product architecture built for a leading salon and vocational institute in Andhra Pradesh. Serving two physical branches in Yelamanchili & Atchutapuram, the product replaces fragmented tools with a single, role-based mobile experience where users switch between personal grooming & bridal service discovery and comprehensive academy course management within one account context.",
     role: "Lead Product Designer & Mobile Engineer",
     responsibilities: [
       "Architected the unified dual-experience (Customer + Student) user model",
-      "Designed mobile design system and component hierarchy",
-      "Implemented screen flows for service booking, availability selection, and branch discovery",
-      "Engineered student portal components for course tracking, assignments, schedules, and certificates",
+      "Designed mobile design system and component hierarchy tailored for Yelamanchili & Atchutapuram branches",
+      "Implemented screen flows for salon service booking, bridal packages, availability selection, and branch discovery",
+      "Engineered student portal components for vocational beauty course tracking, assignments, schedules, and certificates",
       "Structured modular state management for future backend REST API integration",
     ],
     tags: [
       "React Native / Mobile UI",
       "TypeScript",
       "Dual-Role UX",
+      "Yelamanchili & Atchutapuram AP",
       "Product Architecture",
-      "Component System",
     ],
     slug: "vst-beauty-academy",
     visualType: "vst",
     problem:
-      "Traditional beauty care businesses operating an academy face high user friction when requiring customers and students to install separate applications or maintain isolated login credentials. This fragments brand equity and creates administrative complexity.",
+      "VST operates two prominent branches in Yelamanchili & Atchutapuram offering salon services, bridal styling, and professional beauty training. Running separate applications or manual offline booking created high customer friction and administrative overhead for student enrollment.",
     solution:
-      "Engineered a unified application architecture that dynamically adapts the navigation, UI components, and state based on the active role within a single user account context. Customers access service discovery and appointment booking, while students access course tracking, schedules, and learning materials.",
+      "Engineered a unified application architecture live at vst-saloon.vercel.app that dynamically adapts navigation, UI components, and state based on the active role within a single user account. Customers explore salon services, bridal packages, and branch booking, while students track course modules, schedules, and digital certifications.",
     architectureApproach:
-      "Role-Based Unified Account Model: A single authentication context hydrates either the Customer Experience flow (Discover -> Book -> Manage) or the Student Experience flow (Join -> Learn -> Track -> Complete) without requiring app switching.",
+      "Role-Based Unified Account Model: A single authentication context hydrates either the Customer Experience flow (Discover -> Book -> Manage) or the Student Experience flow (Join -> Learn -> Track -> Complete) across Yelamanchili & Atchutapuram branches without requiring app switching.",
     keyFeatures: [
       {
-        title: "Customer Service Discovery & Booking",
+        title: "Customer Salon & Bridal Service Booking",
         description:
-          "Comprehensive beauty service directory including personal grooming, bridal preparation, pre-wedding packages, and special occasions with real-time branch discovery and availability selection.",
+          "Comprehensive service directory covering personal grooming, hair treatments, skin care, bridal preparation, and pre-wedding shoot styling with Yelamanchili & Atchutapuram branch selection.",
         items: [
-          "Service catalog with category filtering and detailed service breakdowns",
-          "Branch location finder with interactive map preview",
-          "Interactive availability selector & appointment scheduling",
-          "Appointment lifecycle management (upcoming, past, cancellation requests)",
-          "Enquiry form, customer reviews, and push notification center",
+          "Service catalog with category filtering (Hair, Skin, Nails, Bridal & Pre-Wedding)",
+          "Branch location selector for Yelamanchili & Atchutapuram branches",
+          "Interactive time slot availability selector & specialist scheduling",
+          "Appointment lifecycle management (upcoming, past history, cancellation requests)",
+          "Direct WhatsApp enquiry integration and push notification alerts",
         ],
       },
       {
-        title: "Student Academy Portal",
+        title: "Student Vocational Academy Portal",
         description:
-          "Integrated learning & administrative dashboard for enrolled academy students to track academic progress, access course materials, and manage fees.",
+          "Integrated learning & administrative dashboard for enrolled academy students to track academic progress, access practical course materials, and view fee receipts.",
         items: [
-          "Academy course catalog & digital application submission",
-          "Enrolled student dashboard with real-time course progress indicator",
+          "Beauty academy course catalog (Beautician Diploma, Bridal Makeup, Hair Styling)",
+          "Student dashboard with real-time course progress indicator",
           "Interactive class schedules and attendance logging overview",
           "Digital assignment submissions and instructor feedback center",
           "Fee breakdown, payment receipt generation, and digital certificates",
@@ -61,14 +63,14 @@ export const projectsData: Project[] = [
       },
     ],
     customerExperience: [
-      "Discover Services & Special Packages",
-      "Select Branch & Check Specialist Availability",
+      "Discover Salon Services & Bridal Packages",
+      "Select Yelamanchili or Atchutapuram Branch",
       "Book & Manage Appointments Seamlessly",
-      "Submit Enquiries & Receive Notifications",
+      "Direct WhatsApp Consultation & Enquiries",
     ],
     studentExperience: [
       "Explore Academy Courses & Apply Online",
-      "Access Class Schedules & Learning Materials",
+      "Access Class Schedules & Practical Modules",
       "Submit Assignments & Track Attendance",
       "View Fee Receipts & Download Certificates",
     ],
@@ -76,7 +78,7 @@ export const projectsData: Project[] = [
       {
         category: "Frontend & Mobile",
         items: [
-          "React Native / Mobile UI Architecture",
+          "React / Mobile UI Architecture",
           "TypeScript",
           "Component-Driven Layouts",
         ],
@@ -86,38 +88,39 @@ export const projectsData: Project[] = [
         items: [
           "Role-Based Access Control (RBAC)",
           "Unified Navigation Context",
-          "Mock API Layer",
+          "Vercel Cloud Deployment",
         ],
       },
       {
         category: "Design System",
         items: [
-          "Custom UI Component Library",
+          "Custom Beauty UI Component Library",
           "Responsive Layout Boundaries",
-          "Dark/Light Neutral Palette",
+          "Editorial Gold & Warm Palette",
         ],
       },
     ],
     designDecisions: [
-      "Zero App-Switching Friction: Kept both customer and student interfaces in a single binary using dynamic routing.",
-      "Neutral Base Design with Brand Highlights: Allowed beauty media and course cards to take visual precedence.",
-      "Modular Mock Architecture: Structured data models to map 1:1 with REST API endpoints for upcoming backend integration.",
+      "Zero App-Switching Friction: Kept both customer and student interfaces in a single binary using dynamic role switching.",
+      "Branch Location Context: Integrated Yelamanchili & Atchutapuram location pickers into the primary booking flow.",
+      "Live Vercel Production Build: Deployed accessible web preview at vst-saloon.vercel.app with instant responsiveness.",
     ],
     currentStatus:
-      "Frontend-focused mobile product design and component implementation using structured local mock data, engineered for seamless REST API backend integration.",
+      "Deployed live web preview at vst-saloon.vercel.app featuring complete dual-role frontend components, branch selection, and structured mock data ready for backend REST API integration.",
     futureBackendDirection:
       "Future roadmap includes Node.js/Express backend integration, JWT-based RBAC authentication, real-time push notifications, payment gateway integration, and live branch slot syncing.",
   },
   {
     id: "ai-attendance",
     number: "02",
-    name: "AI Attendance System",
+    name: "EduVision AI — Attendance System",
     category: "AI / Software Product",
     badge: "AI Recognition Engine",
+    liveUrl: "https://eduvision-frontend.vercel.app/",
     shortDescription:
-      "An automated computer-vision facial recognition system for real-time identity verification, biometric attendance logging, and administrative reporting.",
+      "An enterprise-grade computer-vision facial recognition platform for real-time biometrics, 99.8% precision identity verification, and proxy-free attendance logging.",
     fullDescription:
-      "The AI Attendance System is a software product designed to automate traditional attendance tracking. Utilizing deep learning facial recognition models via InsightFace and OpenCV, the platform extracts 512-dimensional facial embeddings to perform real-time identification, log timestamped attendance records, and present analytics via an interactive administrative dashboard.",
+      "EduVision AI is a computer-vision biometric product designed to eliminate proxy attendance and administrative friction. Utilizing deep learning facial recognition models via InsightFace and OpenCV, the platform processes real-time video feeds with 99.8% biometric precision, extracting 512-dimensional facial embeddings for instant attendance logging and analytics.",
     role: "AI Systems Engineer & Backend Architect",
     responsibilities: [
       "Engineered face detection and embedding extraction pipelines using InsightFace & OpenCV",
@@ -140,7 +143,7 @@ export const projectsData: Project[] = [
     problem:
       "Manual attendance taking in educational institutions and organizations is slow, prone to proxy attendance, and creates administrative overhead for record-keeping and reporting.",
     solution:
-      "Developed an end-to-end computer-vision pipeline that captures video frames or images, detects facial landmarks, computes mathematical embedding vectors, matches them against registered records using cosine similarity thresholds, and logs verified attendance in real time.",
+      "Developed EduVision AI (live at eduvision-frontend.vercel.app), an end-to-end computer-vision pipeline that captures video frames, detects facial landmarks, computes mathematical embedding vectors, matches them against registered records using cosine similarity thresholds, and logs verified attendance in real time.",
     architectureApproach:
       "Asynchronous AI Processing Pipeline: Image frames are passed to a lightweight FastAPI microservice. InsightFace computes facial vectors on ONNXRuntime, comparing vectors against cached Redis embeddings before committing attendance logs to the primary database.",
     workflowFlowchart: [
@@ -177,7 +180,7 @@ export const projectsData: Project[] = [
     ],
     keyFeatures: [
       {
-        title: "Biometric Face Recognition Engine",
+        title: "99.8% Biometric Face Recognition Engine",
         description:
           "Sub-second facial landmark detection and feature vector generation using InsightFace and ONNXRuntime speed-optimized inference.",
         items: [
@@ -229,18 +232,19 @@ export const projectsData: Project[] = [
       "Configurable Confidence Thresholds: Implemented adjustable cosine similarity matching metrics to balance precision and recall.",
     ],
     currentStatus:
-      "Functional backend AI microservice implementation with FastAPI API endpoints, InsightFace embedding recognition, Redis caching, and verification logging workflows.",
+      "Deployed live web preview at eduvision-frontend.vercel.app with complete frontend biometric interfaces, FastAPI API endpoints, InsightFace embedding recognition, and verification logging workflows.",
   },
   {
     id: "gym-website",
     number: "03",
-    name: "Gym Website",
+    name: "FitForge Gym — Athletic Club",
     category: "Web / Frontend / UI",
     badge: "Web & UI Platform",
+    liveUrl: "https://fit-forge-gym-kappa.vercel.app/",
     shortDescription:
-      "A high-impact, fully responsive fitness center website (FitForge Gym) featuring dynamic program discovery, trainer showcases, and lead-generation booking flows.",
+      'A high-impact, fully responsive fitness platform ("Forge Your Body. Dominate Your Limits.") featuring athletic program discovery, BMI calculator, and free trial pass booking.',
     fullDescription:
-      "FitForge Gym is a modern web application built to deliver a premium brand experience for a fitness center. Featuring sharp typography, fluid responsive layouts, structured program cards, trainer spotlight sections, and clear membership tier presentation, the website converts casual visitors into qualified membership leads.",
+      'FitForge Gym is a high-performance web platform built to deliver a premier athletic brand experience. Live at fit-forge-gym-kappa.vercel.app, the website features high-contrast neon typography, structured training discipline cards, trainer spotlights, interactive BMI calculator, and clear 7-day free trial pass conversion flows.',
     role: "Frontend Architect & UI Designer",
     responsibilities: [
       "Designed high-converting homepage layout with distinct content hierarchy",
@@ -271,7 +275,7 @@ export const projectsData: Project[] = [
         description:
           "Bold editorial typography and dynamic layout establishing instant gym identity and motivating call-to-action buttons.",
         items: [
-          'High-contrast headline typography with action CTAs ("Join Now", "Explore Programs")',
+          'High-contrast headline typography with action CTAs ("Start 7-Day Free Trial", "Explore Programs")',
           "At-a-glance facility highlights and core training disciplines",
           "Responsive container layout optimized for mobile and desktop viewports",
         ],
@@ -326,6 +330,6 @@ export const projectsData: Project[] = [
       "Zero Unused Asset Overhead: Used SVG vector iconography and CSS layout utilities to guarantee fast page render speeds.",
     ],
     currentStatus:
-      "Complete frontend implementation with responsive component hierarchy, structured data models, and interactive lead-generation interfaces.",
+      "Deployed live production web application at fit-forge-gym-kappa.vercel.app featuring full responsive program selector, trainer spotlights, BMI calculator, and free trial pass booking flows.",
   },
 ];

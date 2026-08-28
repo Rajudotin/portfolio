@@ -104,11 +104,44 @@
   animation-play-state: paused;
 }
 
+/* Particle Blast Hover Animation Effects */
+@keyframes blast-spark {
+  0% {
+    transform: translate(0, 0) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--tw-blast-x), var(--tw-blast-y)) scale(0);
+    opacity: 0;
+  }
+}
+
+.animate-blast-spark {
+  animation: blast-spark 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes shockwave-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-shockwave {
+  animation: shockwave-ring 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float-slow,
   .animate-float-reverse,
   .animate-marquee-ltr,
-  .animate-marquee-rtl {
+  .animate-marquee-rtl,
+  .animate-blast-spark,
+  .animate-shockwave {
     animation: none;
   }
 }
