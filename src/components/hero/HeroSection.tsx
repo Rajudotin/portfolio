@@ -17,12 +17,12 @@ export const HeroSection: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         
-        {/* Human Personal Status Tag */}
+        {/* Personal Identity & Positioning Tag */}
         <div className="flex flex-wrap items-center gap-2 mb-4">
           <div className="inline-flex items-center space-x-2 bg-[#F2EFE8] border border-[#E8E5DC] px-3.5 py-1 rounded-full text-xs font-mono text-[#52524E]">
             <span className="w-2 h-2 rounded-full bg-[#10B981]" />
             <span className="font-semibold text-[#161616]">Bala Venkataraju Singampalli</span>
-            <span className="text-[#82827C]">• Software Engineer</span>
+            <span className="text-[#82827C]">• {siteConfig.positioning}</span>
           </div>
 
           <div className="inline-flex items-center space-x-1.5 bg-[#F2EFE8] border border-[#E8E5DC] px-3 py-1 rounded-full text-xs font-mono text-[#52524E]">
@@ -31,9 +31,9 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Natural Headline */}
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display tracking-tight text-[#161616] leading-[1.08] max-w-4xl mb-4">
-          I build web apps, mobile products & AI systems.
+        {/* Hero Headline */}
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display tracking-tight text-[#161616] leading-[1.08] max-w-5xl mb-4">
+          {siteConfig.heroHeadline}
         </h1>
 
         {/* Supporting Copy & CTAs */}
@@ -43,7 +43,7 @@ export const HeroSection: React.FC = () => {
               {siteConfig.heroSubheadline}
             </p>
 
-            {/* Practical Focus Pills */}
+            {/* Practical Capability Badges */}
             <div className="flex flex-wrap gap-2 mt-4">
               <span className="inline-flex items-center space-x-1.5 bg-[#FAF9F5] border border-[#E8E5DC] px-3 py-1 rounded-full text-xs font-mono text-[#52524E]">
                 <Layout className="w-3.5 h-3.5 text-[#161616]" />
@@ -60,12 +60,13 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
 
+          {/* Primary & Secondary Action CTAs */}
           <div className="md:col-span-4 lg:col-span-5 flex flex-wrap sm:flex-nowrap items-center gap-2.5 md:justify-end">
             <button
               onClick={() => scrollToSection("#work")}
               className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#FAF9F5] bg-[#161616] hover:bg-[#262624] rounded-lg transition-all duration-200 cursor-pointer shadow-xs active:translate-y-0.5"
             >
-              <span>View Featured Work</span>
+              <span>View My Work</span>
               <ArrowDown className="w-4 h-4 ml-2" />
             </button>
 
@@ -73,7 +74,7 @@ export const HeroSection: React.FC = () => {
               onClick={() => scrollToSection("#contact")}
               className="w-full sm:w-auto inline-flex items-center justify-center px-5 py-3 text-xs font-semibold uppercase tracking-wider text-[#161616] bg-[#FAF9F5] hover:bg-[#F2EFE8] border border-[#161616] rounded-lg transition-all duration-200 cursor-pointer shadow-xs active:translate-y-0.5"
             >
-              <span>Get in Touch</span>
+              <span>Let's Work Together</span>
               <ArrowUpRight className="w-4 h-4 ml-2" />
             </button>
           </div>
@@ -85,7 +86,7 @@ export const HeroSection: React.FC = () => {
         <div className="flex items-center space-x-2">
           <span className="w-2 h-2 rounded-full bg-[#10B981]" />
           <span className="text-[#161616] font-medium">
-            Open for software engineering roles & projects
+            Open for product development roles & projects
           </span>
         </div>
         <div className="flex items-center space-x-3">

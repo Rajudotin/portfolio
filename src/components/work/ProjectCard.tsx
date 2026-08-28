@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, ExternalLink, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ExternalLink, CheckCircle2, UserCheck } from "lucide-react";
 import { Project } from "../../types";
 import { VstVisualPreview } from "./VstVisualPreview";
 import { AiAttendanceVisualPreview } from "./AiAttendanceVisualPreview";
@@ -87,6 +87,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             <h3 className="text-2xl sm:text-3xl font-display text-[#161616] tracking-tight mb-2 group-hover:text-[#52524E] transition-colors">
               <Link to={`/work/${project.slug}`}>{project.name}</Link>
             </h3>
+
+            {/* Role / Contribution */}
+            <div className="flex items-center space-x-1.5 text-xs font-mono text-[#52524E] mb-3">
+              <UserCheck className="w-3.5 h-3.5 text-[#161616]" />
+              <span>Role: <strong className="text-[#161616]">{project.role}</strong></span>
+            </div>
 
             {/* Short Description */}
             <p className="text-xs sm:text-sm text-[#52524E] leading-relaxed mb-4">
