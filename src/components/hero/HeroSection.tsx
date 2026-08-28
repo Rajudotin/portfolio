@@ -11,7 +11,7 @@ export const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="relative flex flex-col justify-between pt-24 pb-12 sm:pt-28 sm:pb-16 border-b border-[#E8E5DC] overflow-hidden">
+    <section className="relative flex flex-col justify-between pt-32 pb-12 sm:pt-36 lg:pt-40 sm:pb-16 border-b border-[#E8E5DC] overflow-hidden">
       {/* Subtle Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#16161608_1px,transparent_1px),linear-gradient(to_bottom,#16161608_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none" />
 
