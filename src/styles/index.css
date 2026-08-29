@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Instrument Serif", "Playfair Display", Georgia, serif;
-  --font-sans:
-    "DM Sans", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Oswald", "Poppins", sans-serif;
+  --font-display: "Oswald", "Poppins", sans-serif;
+  --font-sans: "Poppins", system-ui, -apple-system, sans-serif;
 
   --color-surface-bg: #faf9f5;
   --color-surface-card: #ffffff;
@@ -25,7 +25,7 @@
   body {
     background-color: var(--color-surface-bg);
     color: var(--color-ink-primary);
-    font-family: var(--font-sans);
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     width: 100%;
     margin: 0;
@@ -33,9 +33,43 @@
   }
 }
 
-/* Custom Editorial Classes */
+/* Lenis Smooth Scroll Rules */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom Font Utilities */
 .font-display {
-  font-family: var(--font-serif);
+  font-family: 'Oswald', 'Poppins', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.font-sans {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-oswald {
+  font-family: 'Oswald', sans-serif;
 }
 
 .text-balance {
